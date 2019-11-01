@@ -446,6 +446,12 @@ class PdfHighlighter<T_HT: T_Highlight> extends PureComponent<
   };
 
   afterSelection = () => {
+
+    const textLayerContent = document.querySelectorAll('.textLayer div:not(.PdfHighlighter__highlight-layer)');
+    for (let i = 0; i < textLayerContent.length; i++) {
+      textLayerContent[i].classList.add("widthPaddingUnset")
+    }
+
     const { onSelectionFinished } = this.props;
 
     const { isCollapsed, range } = this.state;
@@ -490,6 +496,10 @@ class PdfHighlighter<T_HT: T_Highlight> extends PureComponent<
           )
       )
     );
+
+    for (let i = 0; i < textLayerContent.length; i++) {
+      textLayerContent[i].classList.remove("widthPaddingUnset")
+    }
   };
 
   toggleTextSelection(flag: boolean) {

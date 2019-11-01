@@ -34,3 +34,12 @@
 .Highlight--scrolledTo .Highlight__part {
   background: #ff4141;
 }
+
+.textLayer > div {
+  width: 100%;
+}
+
+.widthPaddingUnset {
+  width: unset !important;
+  padding: 0 !important;
+}
