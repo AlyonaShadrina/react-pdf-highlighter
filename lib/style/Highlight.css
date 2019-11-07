@@ -39,7 +39,7 @@
   width: 100%;
 }
 
-.widthPaddingUnset {
+:not(.AreaHighlight).widthPaddingUnset {
   width: unset !important;
   padding: 0 !important;
 }
