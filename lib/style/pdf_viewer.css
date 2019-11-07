@@ -18,7 +18,8 @@ html
   .textLayer
   > div:not(.PdfHighlighter__highlight-layer):not(.Highlight):not(.Highlight-emoji) {
   opacity: 1;
-  mix-blend-mode: multiply;
+  mix-blend-mode: luminosity;
+  z-index: 1;
 }
 
 .textLayer ::selection {
